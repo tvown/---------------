@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(180deg, #f9a100 0%, #ffffff 50%);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 500px 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.menu h2 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 34px;
+}
+
+.menu figcaption {
+    font-size: 34px;
+}
+
+#getOffer {
+    background-color: red;
+    color: white;
+
+    border: 0;
+    border-radius: 15px;
+
+    padding: 5px 10px;
+}
+
+.welcome h2, p {
+    padding-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    border: 0;
+    border-radius: 55px;
+
+    width: 350px;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f9a100 100%);
+    bottom: 0;
+
+    width: 100%;
+}
+
+/*Как положить подвал вниз без сьедания остальных отделов*/
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 300px;
+}
+
+.socials img {
+    width: 20px;
+}
