@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 li {
@@ -10,18 +9,87 @@ li {
 
 body {
     background: linear-gradient(180deg, #f9a100 0%, #ffffff 50%);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- Шапка ---------- */
 
 .nav {
     display: grid;
     grid-template-columns: 500px 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1200px;
+.nav li:first-child {
+    justify-content: flex-start;
+    gap: 10px;
 }
+
+.nav img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* ---------- Приветственный экран ---------- */
+
+.welcome ul {
+    display: flex;
+    flex-direction: row-reverse; /* Убери эту строку, если нужна картинка справа */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.welcome li {
+    flex: 1;
+}
+
+.welcome h2,
+.welcome p {
+    padding-bottom: 20px;
+}
+
+#imgBurger {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Кнопка ---------- */
+
+#getOffer {
+    background-color: red;
+    color: white;
+
+    border: 0;
+    border-radius: 15px;
+
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* ---------- Меню ---------- */
 
 .menu h2 {
     text-align: center;
@@ -33,23 +101,10 @@ body {
     font-size: 34px;
 }
 
-#getOffer {
-    background-color: red;
-    color: white;
-
-    border: 0;
-    border-radius: 15px;
-
-    padding: 5px 10px;
-}
-
-.welcome h2, p {
-    padding-bottom: 20px;
-}
-
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .card {
@@ -57,28 +112,32 @@ body {
 }
 
 .card img {
+    width: 350px;
+
     border: 0;
     border-radius: 55px;
-
-    width: 350px;
 }
+
+/* ---------- Подвал ---------- */
 
 footer {
+    width: 100%;
     text-align: center;
     background: linear-gradient(180deg, #ffffff 0%, #f9a100 100%);
-    bottom: 0;
-
-    width: 100%;
+    padding: 20px 0;
 }
-
-/*Как положить подвал вниз без сьедания остальных отделов*/
 
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 300px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 300px 20px;
+}
+
+.socials {
+    margin-top: 20px;
 }
 
 .socials img {
     width: 20px;
+    margin: 0 5px;
 }
